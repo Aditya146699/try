@@ -25,6 +25,7 @@ color:white;
 h1{
     color:white;
     font-family:Poppins,sans-serif;
+   
 }
 i
 {
@@ -32,7 +33,7 @@ i
     margin-right:10px
 }
 a
-{text-decoration:none}
+{text-decoration:none;}
 *{
     box-sizing:border-box;
     margin:0;
@@ -222,7 +223,7 @@ h1{
     padding:2px 4px
 }
 .watch-btn{
-    background:#ed3832;
+    background:green;
     color:#000;
     border-radius:4px;
     font-weight:400;
@@ -230,6 +231,11 @@ h1{
     padding:10px 20px;
     text-decoration:none;
 }
+.watch-btn:hover{
+    background-color: red;
+    color: white;
+}
+
 #watchh{margin:30px 0 20px 0;}
 @media only screen and (min-width:600px){
     h1{font-size:28px}
@@ -293,9 +299,9 @@ h1{
     background-color: #161515;
     margin-left:10% ;
     margin-right: 10%;
-    margin-top: 20px;
+    margin-top: 40px;
     margin-bottom: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 h2{
     font-family:Montserrat,sans-serif;
@@ -306,7 +312,7 @@ h2{
 }
 #latest{
     margin-left:20px;
-    margin-top:20px;
+   padding-top: 10px;
     margin-bottom:15px;
 }
 #latest2 a{
@@ -376,7 +382,7 @@ h2{
     }
     .dubb{
         color:#fff;
-        background-color:red;
+        background-color:blueviolet;
         position:absolute;
         bottom:10px;
         left:10px;
@@ -396,7 +402,7 @@ h2{
         color:#000;
     }
     .la-details{
-        background-color:#202125;
+        background-color:black;
         width:100%;
         height:85px;box-sizing:border-box;
         padding:10px;
@@ -576,12 +582,13 @@ h2{
         object-fit:cover;
         position:absolute
     }
+
     .shado{
-        box-shadow:75px 0 150px 100px #14151a inset;
-        z-index:1;
         width:100%;
         height:100%;
         position:absolute;
+        box-shadow:75px 0 150px 100px #14151a inset;
+        z-index:1;
     }
     .shado a{
         display:block;
@@ -589,20 +596,35 @@ h2{
         height:100%;
     }
     .data-slider{
+        opacity: 0%;
         z-index:2;
         margin-left:5%;
-        max-width:50%
+        max-width:50%;
+        
+    }
+  
+    .data-slider:hover{
+        opacity: 100%; 
     }
     .data-slider div{
         margin-top:15px
+    }
+    @media only screen and (max-width:800px){
+        .data-slider{
+            opacity: 100%;
+           
+        }
+        .shado{
+            box-shadow:75px 0 150px 100px #14151a inset;
+            z-index:1;
+        } 
     }
     .year{
         color:#fff;
         font-family:Montserrat,sans-serif
     }
     .small-synop{
-        color:#fff;
-        font-family:Montserrat,sans-serif;
+        opacity: 0;
         font-size:12px;
         margin-top:15px;
         -webkit-tap-highlight-color:transparent;
@@ -612,13 +634,11 @@ h2{
         --breakpoint-lg:992px;
         --breakpoint-xl:1200px;
         text-align:left;
-        color:#fff;
         -webkit-text-size-adjust:none;
         box-sizing:border-box;
         line-height:1.6em;
         font-weight:300;
-        margin-bottom:30px;
-        font-size:12px;
+        font-size:1px;
         -webkit-box-orient:vertical;
         display:-webkit-box;
         -webkit-line-clamp:2;
@@ -630,10 +650,7 @@ h2{
         padding:8px 12px;
     }
     .spotlight{
-        color:#ed3832;
-        font-family:Montserrat,sans-serif;
-        font-size:14px;
-        margin-bottom:20px;
+       visibility: hidden;
     }
     .fa-info-circle,.fa-play-circle{
         margin-right:4px;
@@ -643,14 +660,25 @@ h2{
         margin-right:0;
     }
     .watch-btn2{
-        background-color:#4a4b51;
+        background-color:rgb(31, 28, 28);
         color:#fff;margin-left:15px;
+    }
+    .watch-btn2:hover{
+        color: #000;
     }
     .year2{
         margin-left:10px;
     }
     .year i{
         color:#fff;
+    }
+    .year i:hover{
+        font-size: 20px;
+        color: rgb(60, 60, 255);
+    }
+    .year2 i:hover{
+        font-size: 20px;
+        color: black;
     }
     .next,.prev
     {
@@ -659,7 +687,7 @@ h2{
     }
     .cbox1
     {
-        background-color:#ed3832;
+        background-color:red;
         color:#000;
         font-family:Montserrat,sans-serif;
         border:none;
@@ -667,8 +695,8 @@ h2{
         font-size:12px;
     }
     .cbox2{
-        background-color:#fff;
-        color:#000;
+        background-color:blueviolet;
+        color:white;
         font-family:Montserrat,sans-serif;
         font-size:12px;
         border:none;
@@ -693,6 +721,9 @@ h2{
      .next{
         right:0;
         border-radius:10px 0 0 10px;
+    }
+    .prev{
+        left: 0;
     }
     .next:hover,.prev:hover
     {
